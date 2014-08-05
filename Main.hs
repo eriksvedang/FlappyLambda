@@ -50,7 +50,7 @@ lambda ySpeed = [(-6 - expand, -10), (2 - expand, 8), (4, 8), (1, 0.5), (6 + exp
     where expand = 1.0 - ySpeed
 
 drawBird :: Bird -> Picture
-drawBird (Bird pos ySpeed) = drawAtPos pos $ scale 2.0 2.0 $ lineLoop (lambda ySpeed)
+drawBird (Bird pos ySpeed) = drawAtPos pos $ scale (-2.0) 2.0 $ lineLoop (lambda ySpeed)
 
 drawObstacle :: Obstacle -> Picture
 drawObstacle (Obstacle (x, y) (w, h)) = drawAtPos (x, y) $ polygon $ rectanglePath w h
